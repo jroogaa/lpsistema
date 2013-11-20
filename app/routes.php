@@ -21,3 +21,9 @@ Route::get('saludo',function(){
 	echo 'Muy buenas tardes LARAVEL ... !';
 
 });
+
+Route::get('login',function(){
+
+	return View::make('login.login');
+
+});
