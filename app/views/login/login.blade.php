@@ -43,7 +43,10 @@
 					<a href="index3.html">Demo 3</a>
 				</nav> -->
             </header>
-            <section>				
+            <section>
+
+            {{Form::open(array('url'=>'/login'))}}
+
                 <div id="container_demo" >
                     <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
                     <a class="hiddenanchor" id="toregister"></a>
@@ -54,18 +57,31 @@
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > DNI </label>
+                                    {{Form::text('username','',array('class'=>'uname','required'=>'required','placeholder'=>'Ingrese DNI'))}}
+                                   <!--
                                     <input id="username" name="username" type="text" required="required" placeholder="Ingrese DNI"/>
+                                    -->
                                 </p>
                                 <p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Password </label>
+
+                                      {{Form::password('password','',array('name'=>'password','class'=>'uname','required'=>'required','laceholder'=>'Ingrese clave'))}}   
+                                    <!--
                                     <input id="password" name="password" required="required" type="password" placeholder="Password" /> 
+
+                                    -->
                                 </p>
                                 <p class="keeplogin"> 
 									<!-- <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 									<label for="loginkeeping">Keep me logged in</label> -->
 								</p>
                                 <p class="login button"> 
+                                   <!--
                                     <input type="submit" value="Login" /> 
+                                    -->
+                                 {{Form::submit('Ingresar', array('class' => 'btn btn-default'))}}
+
+
 								</p>
                                 <p class="change_link">
 									Registar Nuevo Usuario?
@@ -105,6 +121,10 @@
 						
                     </div>
                 </div>  
+
+                {{Form::close()}}
+
+
             </section>
         </div>
     </body>
