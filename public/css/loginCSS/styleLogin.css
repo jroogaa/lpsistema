@@ -1,0 +1,200 @@
+*{	
+	margin: 0;
+	padding: 0;
+}
+
+fieldset, img {	border: 0; }
+
+article,figcaption,figure,footer,header,hgroup,nav,section{
+	display: block;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+/*equivalencias 16px = 12pt = 100% = 1em*/
+
+@font-face{
+	font-family: "chalet";
+	src: url("fonts/chalet.eot");
+	src: url("fonts/chalet.eot?#iefix") format("embedded-opentype"),
+		url("fonts/chalet.woff") format("woff"),
+		url("fonts/chalet.ttf") format("truetype"),
+		url("fonts/chalet.svg#chalet") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+body, form {/* fuente a todo el documento */
+	font-family: "chalet","Droid Sans", Helvetica, Arial, sans-serif;
+	line-height: 1.125em; /*distancia entre lineas*/
+	font-size: 1em;
+}
+
+img {max-width: 250px}
+h1 { font-size: 1.125em; }
+
+/*/////////////////////////////////////////////*/
+
+a { color: #2069b4;
+	text-decoration: none}
+	a:hover { color: #2a2e36; }
+
+p a, p a:hover { border-bottom: 1px dotted; } /*subrayado a hipervinculos*/
+
+/*//////////////////////////////////////////////*/
+
+form p input[type="text"], form p input[type="password"]
+	{ font-size: 1em; 
+	border-radius: 0.3125em; 
+	-moz-border-radius: 0.3125em; 
+	-webkit-border-radius: 0.3125em;} 
+
+/*///////////////////////////////////////////////*/
+
+
+p { /*margen y color a los parrafos*/
+	margin-bottom: 1.25em;
+	color: #9498a1;
+}
+
+p, .button, form input{ font-size: 0.75em; } /*tamaño de letra todo exepto login usuarios logo*/
+
+/*//////////////////////////////////////////////////////////////////////*/
+
+header{
+	background: transparent;
+}
+
+section#top-bar{
+	background: #2a2e36;
+	min-height: 60px;
+}
+
+.button{
+	background: #4E5563;
+	display: inline-block;
+	padding: 0.85em 1em 0.75em 3em;
+	border-radius: 0.5em;
+	margin: 0.8em 3em;
+	font-size: 0.75em;
+	color: white;
+	background-image: url("../../images/icons/ic_left.png");
+	background-repeat: no-repeat;
+	background-position: 0.833em center;
+}
+
+	.button:hover {
+		background-color: #6D788B;
+		color: white;
+	}
+
+.iniciar{
+	background: #2069b4;
+	padding: 0.75em 3em 0.75em 1em;
+	background-image: url("../../images/icons/ic_right.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+
+}
+	.iniciar:hover {
+			background-color: #5081b3;
+			color: white;
+		}
+/*/////////////////////////////////////////////////*/
+h1{
+	background: transparent;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+h1 section, a{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.logo{
+	padding: 1em 0 1em 0;
+}
+
+.login{
+	background: transparent;
+	padding: 1em 0.5em 1em 3em;
+	background-image: url("../../images/login-icon.png");
+	background-repeat: no-repeat;
+	background-position: 0.51em center;
+}
+
+@media(min-width:670px){
+	h1 section{
+		text-align: left;
+		width: 45%;
+	}
+	h1 a{
+		text-align: right;
+		width: 45%;
+	}
+}
+
+@media(max-width: 469px){
+	#top-bar{text-align: center;}
+	img {max-width: 200px}
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+/* ---------- CONTENT Formulario ---------- */
+section#contenido { /*Imagen de fondo de formulario + color -#555555;--#f8f9fa*/
+	background: #FDFDFD url('../../images/artwork-pattern.png') repeat-x left bottom;
+	border: 5px solid #C6CACA;
+	border-radius: 0.9em;
+	max-width: 450px;
+	margin: 0.5em auto;
+	padding: 1.875em 0;
+	text-align: center;
+}
+
+form#login-form { /*tamaño de cajas de texto y centrdo del formulario*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+form label { /*Formulario ordenado en bloque*/
+	display: block;
+	text-transform: uppercase;
+	color: #2a2e36;
+	margin: 0 0 0.3125em 6em;
+	text-align: left;
+}
+
+/*Bordes dimensiones de caja de texto*/
+form input[type="text"], input[type="password"]{
+	border: 1.5px solid #d9dbdd;
+	padding: 1em 0.625em 1em 0.5em;
+	outline: none;
+	width: 60%;
+}
+
+	form input[type="text"]:hover, input[type="password"]:hover, textarea:hover,
+	form input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+		border: 1px solid #9EA2A3;
+	}
+
+/*////////////////////////////////////////////////////////////*/
+
+footer { /*Centrado del footer*/
+	text-align: center;
+	padding: 1.875em 0; /* 30/16 */
+}
+
+
+
+
+
+
+
+
+
+
+
